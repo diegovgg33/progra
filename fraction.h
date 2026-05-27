@@ -1,3 +1,11 @@
+// ----------------------------------------------------------
+// Práctica 1: Clase Fraction
+// Fecha: 1 de junio 2026.
+// Autores:
+//          A01798286 Edgar De La Rosa Menéndez
+//          A0xxxxxxx CHAI
+// ----------------------------------------------------------
+
 #pragma once
 
 #include<iostream>
