@@ -3,7 +3,7 @@
 // Fecha: 1 de junio 2026.
 // Autores:
 //          A01798286 Edgar De La Rosa Menéndez
-//          A0xxxxxxx CHAI
+//          A01799914 Diego Vega Grados
 // ----------------------------------------------------------
 
 #pragma once
