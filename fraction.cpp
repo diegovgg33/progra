@@ -8,6 +8,7 @@
 
 #include <numeric>
 #include <stdexcept>
+#include <iostream>
 #include "fraction.h"
 #include <string>
 
@@ -61,6 +62,6 @@ bool Fraction::operator == (const Fraction& other) const{
     }
 }
 
-std::ostream& operator<<(std::ostream&, const Fraction& r){
+std::ostream& operator<<(std::ostream& os, const Fraction& r){
     return os << r.to_string();
 }
