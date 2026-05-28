@@ -6,11 +6,11 @@
 //          A01799914 Diego Vega Grados
 // ----------------------------------------------------------
 
-#include <numeric>
 #include <stdexcept>
 #include <iostream>
 #include "fraction.h"
 #include <string>
+#include <numeric>
 
 Fraction :: Fraction(int numerator,int denominator){
     if (denominator == 0){
@@ -22,7 +22,7 @@ Fraction :: Fraction(int numerator,int denominator){
         sign = -1;
     }
     
-    int factor = std::gcd(numerator,denominator);
+    int factor = std::gcd(numerator, denominator);
     
     _numerator = std::abs(numerator/factor);
     _denominator = std::abs(denominator/factor);

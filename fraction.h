@@ -8,7 +8,8 @@
 
 #pragma once
 
-#include<iostream>
+#include <iostream>
+#include <numeric>
 
 class Fraction {
 
