@@ -16,21 +16,24 @@ Fraction :: Fraction(int numerator,int denominator){
     if (denominator == 0){
         throw std::invalid_argument("Denominator can not be 0");
     }
-    
     int sign = 1;
-    if (numerator * denominator < 0){
+    if (numerator * denominator <= 0){
         sign = -1;
     }
-
     int factor = std::gcd(numerator, denominator);
-    _sign = sign;
     _numerator = std::abs(numerator/factor);
     _denominator = std::abs(denominator/factor);
+    if (sign == -1){
+       _numerator = _numerator*sign;
+    }
 }
 
 std::string Fraction::to_string() const{
     if (_numerator == 0){
         return "0";
+    }
+    else if (_denominator == 1){
+        return std::to_string(_numerator);
     }
     else{
     return std::to_string(_numerator)
@@ -59,7 +62,7 @@ Fraction::operator double () const{
 }
 
 bool Fraction::operator == (const Fraction& other) const{
-    if ((_numerator == other._numerator)and(_denominator == other._numerator)){
+    if ((_numerator == other._numerator)and(_denominator == other._denominator)){
         return true;
     }
     else{

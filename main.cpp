@@ -28,7 +28,6 @@ int main()
     std::cout << "b: " << b << "\n";
     std::cout << "c: " << c << "\n";
     std::cout << "d: " << d << "\n";
-/*
     std::cout << "e: " << e << "\n";
     std::cout << "a + b: " << a + b << "\n";
     std::cout << "c + d: " << c + d << "\n";
@@ -44,6 +43,7 @@ int main()
         << static_cast<double>(a) << "\n";
     std::cout << "static_cast<double>(b): "
         << static_cast<double>(b) << "\n";
+    /*
     std::cout << "a * b: " << a * b << "\n";
     std::cout << "c * e: " << c * e << "\n";
     std::cout << "~b: " << ~b << "\n";

@@ -29,8 +29,6 @@ private:
 
     int _numerator;
     int _denominator;
-    int _sign;
-    
 };
 
 std::ostream& operator << (std::ostream& os, const Fraction& r);
