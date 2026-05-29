@@ -17,21 +17,26 @@ Fraction :: Fraction(int numerator,int denominator){
         throw std::invalid_argument("Denominator can not be 0");
     }
     
-        int sign = 1;
+    int sign = 1;
     if (numerator * denominator < 0){
         sign = -1;
     }
-    
+
     int factor = std::gcd(numerator, denominator);
-    
+    _sign = sign;
     _numerator = std::abs(numerator/factor);
     _denominator = std::abs(denominator/factor);
 }
 
 std::string Fraction::to_string() const{
+    if (_numerator == 0){
+        return "0";
+    }
+    else{
     return std::to_string(_numerator)
     +"/"
     +std::to_string(_denominator);
+    }
 }
 
 Fraction Fraction::operator + (const Fraction& other) const{
@@ -60,6 +65,21 @@ bool Fraction::operator == (const Fraction& other) const{
     else{
         return false;
     }
+}
+
+bool Fraction::operator != (const Fraction& other) const{
+   if (*this == other){
+    return false;
+   } 
+   else{
+    return true;
+   }
+};
+
+Fraction Fraction::operator * (const Fraction& other) const {
+    int numerator = _numerator * other._numerator;
+    int denominator = _denominator * other._denominator;
+    return Fraction(numerator, denominator);
 }
 
 std::ostream& operator<<(std::ostream& os, const Fraction& r){

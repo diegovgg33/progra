@@ -4,6 +4,7 @@
 // Autores:
 //          A01798286 Edgar De La Rosa Menéndez
 //          A01799914 Diego Vega Grados
+//  g++ -std=c++20 *.cpp -o main.exe  (Compilar)
 // ----------------------------------------------------------
 
 #include <iostream>
@@ -22,11 +23,12 @@ int main()
     // Para imprimir los booleanos como true o false
     // en lugar de 1 o 0.
     std::cout << std::boolalpha;
-/*
+    std::cout << "Probando si funciona" << "\n";
     std::cout << "a: " << a << "\n";
     std::cout << "b: " << b << "\n";
     std::cout << "c: " << c << "\n";
     std::cout << "d: " << d << "\n";
+/*
     std::cout << "e: " << e << "\n";
     std::cout << "a + b: " << a + b << "\n";
     std::cout << "c + d: " << c + d << "\n";
