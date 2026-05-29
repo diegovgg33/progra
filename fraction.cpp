@@ -14,7 +14,7 @@
 
 Fraction :: Fraction(int numerator,int denominator){
     if (denominator == 0){
-        throw std::invalid_argument("Denominator can not be 0");
+        throw std::invalid_argument("Denominator cannot be Zero !");
     }
     int sign = 1;
     if (numerator * denominator <= 0){
@@ -57,8 +57,7 @@ Fraction Fraction::operator - (const Fraction& other)const{
 }
 
 Fraction::operator double () const{
-    double d;
-    return d = static_cast<double>(*this);
+    return static_cast<double>(_numerator) / static_cast<double>(_denominator);
 }
 
 bool Fraction::operator == (const Fraction& other) const{
@@ -83,6 +82,18 @@ Fraction Fraction::operator * (const Fraction& other) const {
     int numerator = _numerator * other._numerator;
     int denominator = _denominator * other._denominator;
     return Fraction(numerator, denominator);
+}
+
+Fraction Fraction::operator ~ () const{
+    int numerator = _denominator;
+    int denominator = _numerator;
+    return Fraction(numerator, denominator);
+}
+
+Fraction Fraction::operator / (const Fraction& other) const{
+    int numerator = _numerator*other._denominator;
+    int denominator = _denominator*other._numerator;
+    return Fraction(numerator,denominator);
 }
 
 std::ostream& operator<<(std::ostream& os, const Fraction& r){

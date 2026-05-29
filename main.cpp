@@ -43,7 +43,6 @@ int main()
         << static_cast<double>(a) << "\n";
     std::cout << "static_cast<double>(b): "
         << static_cast<double>(b) << "\n";
-    /*
     std::cout << "a * b: " << a * b << "\n";
     std::cout << "c * e: " << c * e << "\n";
     std::cout << "~b: " << ~b << "\n";
@@ -58,6 +57,7 @@ int main()
     } catch (const std::invalid_argument& e) {
         std::cout << "a / d: " << e.what() << "\n";
     }
+    /*
     std::cout << "a < b: " << (a < b) << "\n";
     std::cout << "a < c: " << (a < c) << "\n";
     std::cout << "a <= c: " << (a <= c) << "\n";

@@ -24,6 +24,8 @@ public:
     bool operator == (const Fraction& other) const;
     bool operator != (const Fraction& other) const;
     Fraction operator * (const Fraction& other) const;
+    Fraction operator ~ () const;
+    Fraction operator / (const Fraction& other) const;
 
 private:
 
