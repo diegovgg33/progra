@@ -18,4 +18,4 @@ class Figure {
 };
 
 std::ostream& operator << (
-    std::ostream& os, const Figure& figure);
+    std::ostream& os, const Figure& figure)
