@@ -23,7 +23,6 @@ int main()
     // Para imprimir los booleanos como true o false
     // en lugar de 1 o 0.
     std::cout << std::boolalpha;
-    std::cout << "Probando si funciona" << "\n";
     std::cout << "a: " << a << "\n";
     std::cout << "b: " << b << "\n";
     std::cout << "c: " << c << "\n";
@@ -57,7 +56,7 @@ int main()
     } catch (const std::invalid_argument& e) {
         std::cout << "a / d: " << e.what() << "\n";
     }
-    /*
+    
     std::cout << "a < b: " << (a < b) << "\n";
     std::cout << "a < c: " << (a < c) << "\n";
     std::cout << "a <= c: " << (a <= c) << "\n";
@@ -66,6 +65,6 @@ int main()
     std::cout << "a > c: " << (a > c) << "\n";
     std::cout << "a >= c: " << (a >= c) << "\n";
     std::cout << "e >= d: " << (e >= d) << "\n";
-*/
+
     return 0;
 }
