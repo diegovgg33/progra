@@ -7,13 +7,19 @@
 // ----------------------------------------------------------
 
 #include "bankaccount.h"
+#include <iomanip>
+#include <sstream>
 
-std::string BankAccount::to_string () const{
-    return "Numero de cuenta: " + _account_number + "\n"
-    + "Titular de la cuenta: " + _account_holder_name + "\n" 
-    + "Saldo: $" + std::to_string(_balance);
+std::string BankAccount::to_string() const {
+    std::ostringstream oss;
+
+    oss << "Numero de cuenta: " << _account_number << "\n"
+        << "Titular de la cuenta: " << _account_holder_name << "\n"
+        << "Saldo: $" << std::fixed << std::setprecision(2) << _balance;
+
+    return oss.str();
 }
 
-std::ostream& operator<<(std::ostream& os, const BankAccount& ba){
+std::ostream& operator<<(std::ostream& os, const BankAccount& ba) {
     return os << ba.to_string();
 }
